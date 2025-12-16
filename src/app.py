@@ -14,8 +14,8 @@ st.set_page_config(page_title="Carta Cap Table Transformer", page_icon="📊")
 st.title("📊 Carta Cap Table Transformer")
 st.markdown("Transform your Carta export into a formatted cap table.")
 
-# Check if default template exists
-default_template_path = os.path.join(os.path.dirname(__file__), "Cap_Table_Template.xlsx")
+# Check if default template exists (in templates/ folder relative to project root)
+default_template_path = os.path.join(os.path.dirname(__file__), "..", "templates", "Cap Table Template.xlsx")
 default_template_exists = os.path.exists(default_template_path)
 
 # File uploaders

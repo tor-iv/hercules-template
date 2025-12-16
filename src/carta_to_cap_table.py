@@ -251,9 +251,9 @@ def main():
         xw.Book.caller().sheets[0].range('A1').value = "Cancelled - no file selected"
         return
     
-    # Template path (expected in same directory as this script or specified location)
+    # Template path (in templates/ folder relative to project root)
     script_dir = Path(__file__).parent
-    template_path = script_dir / "Cap_Table_Template.xlsx"
+    template_path = script_dir.parent / "templates" / "Cap Table Template.xlsx"
     
     if not template_path.exists():
         # Try looking in common locations
